@@ -57,8 +57,9 @@ def get_quote_by_id(quote_id):
 def get_quotes_count():
    return { "quotes": len(quotes) }
 
-@app.route("/somequote")
-def get_some_quote():
+
+@app.route("/quote/random")
+def get_random_quote():
    return choice(quotes)
 
 
