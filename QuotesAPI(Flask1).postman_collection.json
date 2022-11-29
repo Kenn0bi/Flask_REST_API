@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "d330f8e2-c9ab-4f2c-a547-88ac65a67bd6",
+		"name": "QuotesAPI(Flask1)",
+		"description": "API запросы для курса Flask1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lesson01",
+			"item": [
+				{
+					"name": "Get a list of quotes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/quotes",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"quotes"
+							]
+						},
+						"description": "Получение списка цитат"
+					},
+					"response": []
+				},
+				{
+					"name": "Get quote by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/quotes/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"quotes",
+								"1"
+							]
+						},
+						"description": "Получение цитаты по id"
+					},
+					"response": []
+				},
+				{
+					"name": "Get the number of quotes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/quotes/count",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"quotes",
+								"count"
+							]
+						},
+						"description": "Прлучение количества цитат"
+					},
+					"response": []
+				},
+				{
+					"name": "Get random quote",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/quotes/random",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"quotes",
+								"random"
+							]
+						},
+						"description": "Получаем случайную цитату"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new quote",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"Tom\",\n    \"text\": \"Toms quote\"\n}"
+						},
+						"url": {
+							"raw": "127.0.0.1:5000/quotes",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"quotes"
+							]
+						},
+						"description": "Создание новой цитаты"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit quote",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Отредактированная цитата. Имя автора должно остаться прежним\"\n}"
+						},
+						"url": {
+							"raw": "127.0.0.1:5000/quotes/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"quotes",
+								"1"
+							]
+						},
+						"description": "Редактирование цитаты с указанным id\nЕсли цитата с указаннм id не существует, то создаем новую"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete quote",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:5000/quotes/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"quotes",
+								"1"
+							]
+						},
+						"description": "Удаление цитаты с id"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
