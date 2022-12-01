@@ -51,6 +51,14 @@ def check_rating(quote):
 @app.route("/quotes", methods=['POST'])
 def create_quote():
     data = request.json
+    # check for params
+    quote = QuoteModel.query.first()
+    for key in data:
+        if key == 'rate':
+            data[key] = check_rating(data)
+        if not hasattr(quote, key):
+            return f'Wrong name argument={key}', 404
+
     new_quote = QuoteModel(**data)
     db.session.add(new_quote)
     db.session.commit()
