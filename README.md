@@ -19,5 +19,6 @@
 - http://127.0.0.1:5000/quotes/1
 - http://127.0.0.1:5000/quotes/count
 - http://127.0.0.1:5000/quotes/random
+- http://127.0.0.1:5000/quotes/filter
 - http://127.0.0.1:5000/quotes/1/rate/up
 - http://127.0.0.1:5000/quotes/1/rate/down
