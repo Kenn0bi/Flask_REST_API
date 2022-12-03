@@ -11,9 +11,13 @@
 
 # Работа с API
 
-http://127.0.0.1:5000/authors
-http://127.0.0.1:5000/authors/1
-http://127.0.0.1:5000/authors/1/quotes
-http://127.0.0.1:5000/authors/count
-http://127.0.0.1:5000/quotes
-http://127.0.0.1:5000/quotes/1
+- http://127.0.0.1:5000/authors
+- http://127.0.0.1:5000/authors/1
+- http://127.0.0.1:5000/authors/1/quotes
+- http://127.0.0.1:5000/authors/count
+- http://127.0.0.1:5000/quotes
+- http://127.0.0.1:5000/quotes/1
+- http://127.0.0.1:5000/quotes/count
+- http://127.0.0.1:5000/quotes/random
+- http://127.0.0.1:5000/quotes/1/rate/up
+- http://127.0.0.1:5000/quotes/1/rate/down
